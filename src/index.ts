@@ -11,7 +11,7 @@ export class Jwt {
   /**
    * Signs a payload and returns a string JWT token
    * @param {TPayload} payload The payload to sign.
-   * @returns {}
+   * @returns {string} The string JWT token.
    */
   sign<
     TPayload extends Parameters<typeof jwtSign>[0] = Parameters<
