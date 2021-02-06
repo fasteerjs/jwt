@@ -46,8 +46,8 @@ export interface JwtPluginOptions {
   secret: Parameters<typeof jwtSign>[1]
 }
 
-export const jwtPlugin = ({ secret }: JwtPluginOptions) => {
+export const fasteerJwt = ({ secret }: JwtPluginOptions) => {
   return (fasteer: Fasteer.Fasteer) => fasteer.inject("$jwt", new Jwt(secret))
 }
 
-export default jwtPlugin
+export default fasteerJwt

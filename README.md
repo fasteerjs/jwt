@@ -17,8 +17,11 @@ $ yarn add @fasteerjs/jwt
 ### Registering
 
 ```ts
-/// ... imports
+import { hookFastify } from "@fasteerjs/fasteer"
+// -- or -- const { hookFastify } = require("@fasteerjs/fasteer")
+
 import fasteerJwt from "@fasteerjs/jwt"
+// -- or -- const { fasteerJwt } = require("../dist")
 
 const fasteer = hookFastify({}) // the Fasteer instance
 
