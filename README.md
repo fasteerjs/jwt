@@ -28,11 +28,31 @@ fasteer.plugin(fasteerJwt({ secret: "theJwtSecret" }))
 ## Usage
 
 ### Creating JWT tokens
+
+You can use the `sign(payload: string | object)` function to create JWT tokens.
+
 ```ts
 const HelloController = async (fastify, { $jwt }) => {
   fastify.get("/new-token", async (req, res) => {
     // .. your route logic
     const token = $jwt.sign({ the: "payload" }) // your new JWT token
+  })
+}
+
+export default HelloController
+```
+
+### Decoding JWT tokens
+
+You can use the `decode(token: string, verify: boolean = true)` function to decode JWT tokens.
+When `verify` is set to true (by default it is), the token signature is verified (using `jsonwebtoken`'s `verify` function).
+
+```ts
+const HelloController = async (fastify, { $jwt }) => {
+  // warning: having the token in the URL is insecure!   
+  fastify.get("/check-token/:token", async (req, res) => {
+    // .. your route logic
+    const payload = $jwt.decode(req.params.token)
   })
 }
 

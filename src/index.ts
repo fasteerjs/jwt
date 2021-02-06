@@ -25,12 +25,12 @@ export class Jwt {
    * Decodes the payload.
    *
    * @param {string} token The token to decode.
-   * @param {boolean|undefined|null} verify Should the signature be verified?
+   * @param {boolean} verify Should the signature be verified?
    * @returns {TExpectedPayload | null} The payload or null if the token is invalid.
    */
   decode<TExpectedPayload extends string | object = string | object>(
     token: string,
-    verify?: boolean | null
+    verify = true
   ): TExpectedPayload | null {
     try {
       return (verify
