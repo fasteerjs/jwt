@@ -21,7 +21,7 @@ import { hookFastify } from "@fasteerjs/fasteer"
 // -- or -- const { hookFastify } = require("@fasteerjs/fasteer")
 
 import fasteerJwt from "@fasteerjs/jwt"
-// -- or -- const { fasteerJwt } = require("../dist")
+// -- or -- const { fasteerJwt } = require("@fasteerjs/jwt")
 
 const fasteer = hookFastify({}) // the Fasteer instance
 
@@ -52,7 +52,7 @@ When `verify` is set to true (by default it is), the token signature is verified
 
 ```ts
 const HelloController = async (fastify, { $jwt }) => {
-  // warning: having the token in the URL is insecure!   
+  // warning: having the token in the URL is insecure!
   fastify.get("/check-token/:token", async (req, res) => {
     // .. your route logic
     const payload = $jwt.decode(req.params.token)
