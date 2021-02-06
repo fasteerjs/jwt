@@ -1,0 +1,39 @@
+{
+  "name": "@fasteerjs/jwt",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:fasteerjs/fasteer",
+  "keywords": [
+    "fastify",
+    "nodejs",
+    "fasteer",
+    "fasteer plugin",
+    "jwt",
+    "json web token",
+    "fasteer injectable"
+  ],
+  "homepage": "https:/github.com/fasteerjs/jwt#readme",
+  "bugs": {
+    "url": "https://github.com/fasteerjs/fasteer/issues"
+  },
+  "author": {
+    "name": "Froneb s.r.o.",
+    "email": "hello@froneb.dev"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@fasteerjs/fasteer": "^2.0.4",
+    "@types/jsonwebtoken": "^8.5.0"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint",
+    "compile": "tsc",
+    "prepublish": "yarn format && yarn lint && yarn compile"
+  }
+}

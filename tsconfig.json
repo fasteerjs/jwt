@@ -1,0 +1,7 @@
+{
+  "extends": "@fasteerjs/fasteer/tsconfig.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}
