@@ -17,10 +17,7 @@
   "bugs": {
     "url": "https://github.com/fasteerjs/fasteer/issues"
   },
-  "author": {
-    "name": "Froneb s.r.o.",
-    "email": "hello@froneb.dev"
-  },
+  "author": "Mia (Filip Vottus) <vottus@vott.us>",
   "license": "MIT",
   "private": false,
   "dependencies": {
